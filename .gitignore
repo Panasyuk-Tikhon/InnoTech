@@ -1,3 +1,6 @@
 node_modules
 tsconfig.json
 build
+.gitignore
+package-lock.json
+package.json
