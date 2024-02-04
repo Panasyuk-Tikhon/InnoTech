@@ -1,11 +1,12 @@
-const fileSystem = require('fs');
-const http = require('http');
-const mainPage = require('./Handlers/main-page-handler');
-const aboutePage = require('./Handlers/aboute-page');
-const contactsPage = require('./Handlers/contacts-page');
+import * as fileSystem from 'fs';
+import * as http from 'http';
+import {mainPage} from './Handlers/main-page-handler';
+import {aboutePage} from './Handlers/aboute-page';
+import {contactsPage} from './Handlers/contacts-page';
 
-const pageController = (request, response) => {
-    const url = request.url;
+
+const pageController = (request: any, response: any) => {
+    const url: string = request.url;
     switch(url){
         case '/':
             mainPage(request, response);

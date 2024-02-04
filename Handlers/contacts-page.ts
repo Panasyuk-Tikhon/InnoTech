@@ -1,11 +1,11 @@
-const fileSystem = require('fs');
-const http = require('http');
+import * as fileSystem from 'fs';
+import * as http from 'http';
 
-const contactsPage = (request, response) => {
+const contactsPage = (request: any, response: any) => {
     fileSystem.readFile(
         './Front/contacts.html',
-        'UTF-8',
-        (error, content) => {
+        'utf-8',
+        (error: any, content: any) => {
             if(error){
                 response.writeHead(404);
             }
@@ -18,4 +18,4 @@ const contactsPage = (request, response) => {
     );
 }
 
-module.exports = contactsPage;
+export {contactsPage};

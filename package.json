@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "name": "mycompany",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"tsc",
+    "run": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panasyuk-Tikhon/My-project.git"
+  },
+  "author": "Tikhon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Panasyuk-Tikhon/My-project/issues"
+  },
+  "homepage": "https://github.com/Panasyuk-Tikhon/My-project#readme",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^20.11.16"
+  }
+}

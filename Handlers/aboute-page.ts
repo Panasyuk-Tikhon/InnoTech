@@ -1,10 +1,10 @@
-const fileSystem = require('fs');
-const http = require('http');
+import * as fileSystem from 'fs';
+import * as http from 'http';
 
-const aboutePage = (request, response) => {
+const aboutePage = (request: any, response: any) => {
     fileSystem.readFile(
         './Front/aboute.html',
-        'UTF-8',
+        'utf-8',
         (error, content) => {
             if (error){
                 response.writeHead(404);
@@ -19,4 +19,4 @@ const aboutePage = (request, response) => {
     );
 }
 
-module.exports = aboutePage;
+export {aboutePage};
