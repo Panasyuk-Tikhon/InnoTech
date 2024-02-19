@@ -3,6 +3,7 @@ import * as http from 'http';
 import {mainPage} from './Handlers/main-page-handler';
 import {aboutePage} from './Handlers/aboute-page';
 import {contactsPage} from './Handlers/contacts-page';
+import { fileHandler } from './Handlers/any-type-files-handlers';
 
 
 const pageController = (request: any, response: any) => {
@@ -18,7 +19,7 @@ const pageController = (request: any, response: any) => {
             contactsPage(request, response);
             break;
         default:
-            response.end();
+            fileHandler(request, response);
             break;
     } 
 }

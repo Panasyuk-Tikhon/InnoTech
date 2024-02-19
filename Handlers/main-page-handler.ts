@@ -8,12 +8,13 @@ const mainPage = (request: any, response: any) => {
         (error: any, content: any) => {
             if (error){
                 response.writeHead(404);
+                response.end();
+                return;
             } else{
                 response.writeHead(200, {'Content-Type': 'text/html'});
                 response.write(content);
-                
+                response.end();
             }
-            response.end();
         }
     );
 }

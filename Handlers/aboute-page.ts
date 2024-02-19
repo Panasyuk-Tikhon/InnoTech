@@ -8,13 +8,16 @@ const aboutePage = (request: any, response: any) => {
         (error, content) => {
             if (error){
                 response.writeHead(404);
+                response.end();
+                return;
             }
             else{
                 response.writeHead(200, {'Content-Type':'text/html'});
                 response.write(content);
+                response.end();
                 
             }
-            response.end();
+
         }   
     );
 }
