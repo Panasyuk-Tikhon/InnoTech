@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "typescript": "^5.3.3"
   },
   "name": "mycompany",
@@ -7,8 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc",
-    "run": "node build/index.js"
+    "build": "tsc",
+    "run": "node aditional-files/public/build/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/Panasyuk-Tikhon/My-project#readme",
   "description": "",
   "dependencies": {
-    "@types/node": "^20.11.16"
+    "@types/node": "^20.11.16",
+    "express": "^4.18.3"
   }
 }

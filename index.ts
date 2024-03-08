@@ -1,29 +1,26 @@
-import * as fileSystem from 'fs';
-import * as http from 'http';
-import {mainPage} from './Handlers/main-page-handler';
+import express from 'express';
 import {aboutePage} from './Handlers/aboute-page';
 import {contactsPage} from './Handlers/contacts-page';
-import { fileHandler } from './Handlers/any-type-files-handlers';
+const app = express();
 
+app.use(express.static('aditional-files/public/public-html'));
+app.use(express.static('aditional-files/public/build/typescriptForFront'));
 
-const pageController = (request: any, response: any) => {
-    const url: string = request.url;
-    switch(url){
-        case '/':
-            mainPage(request, response);
-            break;
-        case '/aboute':
-            aboutePage(request, response);
-            break;
-        case '/contacts':
-            contactsPage(request, response);
-            break;
-        default:
-            fileHandler(request, response);
-            break;
-    } 
-}
+app.get('/about.html', (request, response) => {
+    response.redirect('/about');
+});
 
-const server = http.createServer(pageController);
-server.listen(3000);
+app.get('/contacts.html', (request, response) => {
+    response.redirect('/contacts');
+});
+
+app.get('/about', (request, response) =>{
+    aboutePage(request, response);
+});
+
+app.get('/contacts', (request, response) =>{
+    contactsPage(request, response);
+});
+
+app.listen(3000);
 console.log('server started');
