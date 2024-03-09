@@ -1,7 +1,7 @@
 import * as fileSystem from 'fs';
 
 
-const aboutePage = (request: any, response: any) => {
+const aboutPage = (request: any, response: any) => {
     fileSystem.readFile(
         './aditional-files/about.html',
         'utf-8',
@@ -17,4 +17,4 @@ const aboutePage = (request: any, response: any) => {
     );
 };
 
-export {aboutePage};
+export {aboutPage};

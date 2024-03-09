@@ -1,5 +1,5 @@
 import express from 'express';
-import {aboutePage} from './Handlers/aboute-page';
+import {aboutPage} from './Handlers/about-page';
 import {contactsPage} from './Handlers/contacts-page';
 const app = express();
 
@@ -15,7 +15,7 @@ app.get('/contacts.html', (request, response) => {
 });
 
 app.get('/about', (request, response) =>{
-    aboutePage(request, response);
+    aboutPage(request, response);
 });
 
 app.get('/contacts', (request, response) =>{
