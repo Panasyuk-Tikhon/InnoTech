@@ -2,7 +2,7 @@ import * as fileSystem from 'fs';
 
 const contactsPage = (request: any, response: any) => {
     fileSystem.readFile(
-        './aditional-files/contacts.html',
+        './aditional-files/public/contacts.html',
         'utf-8',
         (error: any, content: any) => {
             if(error){
