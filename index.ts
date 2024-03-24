@@ -4,7 +4,7 @@ import {contactsPage} from './Handlers/contacts-page';
 const app = express();
 
 app.use(express.static('aditional-files/public-html'));
-app.use(express.static('build/typescriptForFront'));
+app.use(express.static('build/typescript-for-front'));
 
 app.get('/about.html', (request, response) => {
     response.redirect('/about');
