@@ -3,8 +3,8 @@ import {aboutPage} from './Handlers/about-page';
 import {contactsPage} from './Handlers/contacts-page';
 const app = express();
 
-app.use(express.static('aditional-files/public/public-html'));
-app.use(express.static('aditional-files/public/build/typescriptForFront'));
+app.use(express.static('aditional-files/public-html'));
+app.use(express.static('build/typescriptForFront'));
 
 app.get('/about.html', (request, response) => {
     response.redirect('/about');

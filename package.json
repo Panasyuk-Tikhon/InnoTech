@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "run": "node aditional-files/public/build/index.js"
+    "run": "node build/index.js"
   },
   "repository": {
     "type": "git",
